@@ -3,6 +3,7 @@ package com.example.thehungrydeveloper;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class StarterActivity extends AppCompatActivity {
@@ -36,5 +37,9 @@ public class StarterActivity extends AppCompatActivity {
                 "Pear and chestnut soup",
                 "Pesto and garam masala parcels",
         };
+
+        ArrayAdapter<String> dishesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, dishes);
+
+        startersList.setAdapter(dishesAdapter);
     }
 }
